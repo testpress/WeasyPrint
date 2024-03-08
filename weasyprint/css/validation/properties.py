@@ -1258,7 +1258,7 @@ def justify_content(keyword):
 def align_items(keyword):
     """``align-items`` property validation."""
     return keyword in (
-        'flex-start', 'flex-end', 'center', 'baseline', 'stretch')
+        'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'normal')
 
 
 @property()
@@ -1266,7 +1266,8 @@ def align_items(keyword):
 def align_self(keyword):
     """``align-self`` property validation."""
     return keyword in (
-        'auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch')
+        'auto', 'flex-start', 'flex-end', 'center',
+        'baseline', 'stretch', 'normal')
 
 
 @property()
@@ -1275,7 +1276,7 @@ def align_content(keyword):
     """``align-content`` property validation."""
     return keyword in (
         'flex-start', 'flex-end', 'center', 'space-between', 'space-around',
-        'space-evenly', 'stretch')
+        'space-evenly', 'stretch', 'normal')
 
 
 @property(unstable=True)
