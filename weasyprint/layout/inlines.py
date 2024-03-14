@@ -808,6 +808,7 @@ def split_inline_box(context, box, position_x, max_x, skip_stack,
                                     line_placeholders, waiting_floats,
                                     line_children))
                             
+                            
                             # Applied patch https://github.com/Kozea/WeasyPrint/commit/c9d1a59adc8152c236677894baa6f5ca1c3d9642
                             # As PangoLayout and PangoLogAttr don't always
                             # agree, we have to rely on the actual split to
@@ -817,8 +818,6 @@ def split_inline_box(context, box, position_x, max_x, skip_stack,
                             if child_resume_at is None:
                                 # PangoLayout decided not to break the child
                                 child_resume_at = (0, None)
-                            # TODO: use this when Pango is always 1.40.13+:
-                            # break_found = True
 
 
                             children = children + waiting_children_copy
